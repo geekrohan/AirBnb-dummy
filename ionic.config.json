@@ -1,7 +1,8 @@
 {
   "name": "ionic-angular-practice",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }

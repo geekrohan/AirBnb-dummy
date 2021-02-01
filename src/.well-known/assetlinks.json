@@ -1,0 +1,14 @@
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.airbnbdummy.app",
+            "sha256_cert_fingerprints": [
+                "B6:E0:54:08:5A:62:0E:28:2A:94:40:90:69:6A:5D:A8:37:C3:7F:C3:38:B3:C3:8E:ED:FF:77:5C:E1:D7:B5:E5"
+            ]
+        }
+    }
+]
