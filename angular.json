@@ -31,7 +31,7 @@
                 "output": "./svg"
               },
               "src/.well-known/assetlinks.json",
-              "web.config"
+              "src/web.config"
             ],
             "styles": [
               {
