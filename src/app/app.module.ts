@@ -10,6 +10,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { Deeplinks } from '@ionic-native/deeplinks/ngx';
+import { AppAvailability } from '@ionic-native/app-availability/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,7 +20,8 @@ import { Deeplinks } from '@ionic-native/deeplinks/ngx';
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    Deeplinks
+    Deeplinks,
+    AppAvailability
   ],
   bootstrap: [AppComponent]
 })
