@@ -1,4 +1,4 @@
-import { Component, NgZone } from '@angular/core';
+import { AfterViewInit, Component, NgZone } from '@angular/core';
 
 import { Platform } from '@ionic/angular';
 import { Plugins, Capacitor } from '@capacitor/core';
@@ -28,8 +28,8 @@ export class AppComponent {
     this.platform.ready().then(() => {
       if (Capacitor.isPluginAvailable('SplashScreen')) {
         Plugins.SplashScreen.hide();
+        this.setupDeeplinks();
       }
-      this.setupDeeplinks();
     });
   }
 
@@ -56,6 +56,10 @@ export class AppComponent {
           (no: boolean) => window.location.href = 'https://play.google.com/store/apps/details?id=com.whatsapp&hl=en_IN&gl=US'
         );
 
-    })
+    },
+      (nomatch) => {
+        // nomatch.$link - the full link data
+        console.error('Got a deeplink that didn\'t match', nomatch);
+      })
   }
 }

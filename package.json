@@ -44,6 +44,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
+    "cordova-browser": "^6.0.0",
     "cordova-plugin-appavailability": "^0.4.2",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-ionic-keyboard": "^2.2.0",
@@ -83,7 +84,8 @@
       "cordova-plugin-appavailability": {}
     },
     "platforms": [
-      "android"
+      "android",
+      "browser"
     ]
   }
 }
