@@ -40,11 +40,13 @@ export class AppComponent {
 
   setupDeeplinks() {
     this.deeplinks.route({
+      '/places/tabs/discover': 'nothing',
       '/appredirect': 'places'
     }).subscribe(match => {
       console.log('successfully found match', match);
       const internalPath = `/places/tabs/discover}`
       let app
+      debugger
       if (this.platform.is('android')) {
         app = 'com.airbnbdummy.app';
       }

@@ -9,6 +9,12 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'appredirect',
+    loadChildren: () => import('./places/places.module').then(m => m.PlacesPageModule),
+    canLoad: [AuthGuard]
+
+  },
+  {
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then(m => m.AuthPageModule)
   },
@@ -22,6 +28,7 @@ const routes: Routes = [
     loadChildren: () => import('./bookings/bookings.module').then(m => m.BookingsPageModule),
     canLoad: [AuthGuard]
   },
+
 
 ];
 
